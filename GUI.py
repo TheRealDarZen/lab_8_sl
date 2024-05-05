@@ -10,7 +10,7 @@ class LogViewerApp(tk.Tk):
         self.current_log_index = 0
 
         self.title("Log Viewer")
-        self.geometry("1000x400")
+        self.geometry("800x400")
 
         self.create_widgets()
 
@@ -20,14 +20,14 @@ class LogViewerApp(tk.Tk):
         self.path_frame.pack(side=tk.TOP, fill=tk.X)
 
         self.file_path_var = tk.StringVar()
-        self.file_path_entry = tk.Entry(self.path_frame, textvariable=self.file_path_var, width=150)
+        self.file_path_entry = tk.Entry(self.path_frame, textvariable=self.file_path_var, width=115)
         self.file_path_entry.pack(side=tk.LEFT, fill=tk.X, padx=5)
 
         self.load_button = tk.Button(self.path_frame, text="Load Logs", command=self.load_logs)
         self.load_button.pack(side=tk.LEFT, padx=5)
 
         # Text widget for displaying full log
-        self.log_text = tk.Text(self, wrap=tk.WORD, height=2, width=100)
+        self.log_text = tk.Text(self, wrap=tk.WORD, height=2, width=80)
         self.log_text.pack(side=tk.BOTTOM, anchor=tk.SW, fill=tk.BOTH, padx=5, pady=5)
 
         # Label for log
